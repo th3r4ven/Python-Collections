@@ -46,3 +46,36 @@ def function(List=None):
 
 
 function()
+
+# Other build-in function, starting with enumerate()
+
+# Not using enumerate()
+
+for i in range(len(littleList)):
+    print(f'Index: {i} and Content: {littleList[i]}')
+
+print(list(enumerate(littleList)))  # generate a list with tuples inside
+
+for index, value in enumerate(littleList):  # Unpack tuples automatic
+    print(index, value)
+
+# Other example Unpacking tuples
+
+users = [("Raven", 20, 2000), ("R4ven", 30, 1990), ("R4v3n", 40, 1980)]
+
+for name, age, birth_year in users:
+    print(name)
+
+for _, _, birth_year in users:  # Unpacking and ignoring values that is not going to be used
+    print(birth_year)
+
+# sort and sorted build-in fuctions
+
+print(sorted(littleList))  # This sorted your list but don't change permanently
+
+# But if you use .sort(), this WILL change your list
+
+
+# reversed function will reverse the list order,
+# so you can combine with sort or sorted to get the reverse value
+print(reversed(sorted(littleList)))
